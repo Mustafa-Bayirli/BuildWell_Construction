@@ -80,7 +80,7 @@ export default function Electrical() {
 
   const handlePhoneCall = () => {
     if (typeof window !== "undefined") {
-      window.open("tel:+16462391844", "_self");
+      window.open("tel:+14376881994", "_self");
     }
   };
 
@@ -99,7 +99,7 @@ export default function Electrical() {
                 Safe & Reliable Electrical Work
               </h1>
               <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-                Transform your space with Westside Renovation Inc's professional electrical services in New York. 
+                Transform your space with BuildWell Construction's professional electrical services in Toronto and Ontario. 
                 We deliver safe, reliable electrical solutions with attention to every detail.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -116,7 +116,7 @@ export default function Electrical() {
                   onClick={handlePhoneCall}
                   className="border-white text-blue-700 dark:text-white  hover:bg-white/10 hover:text-white px-8 py-3 text-lg"
                 >
-                  Call (646) 239-1844
+                  Call (437) 688-1994
                 </Button>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function Electrical() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-8">
-                Why Choose Westside Renovation Inc?
+                Why Choose BuildWell Construction?
               </h2>
               <div className="grid grid-cols-1 lg:grid-rows-4 gap-6">
                 {benefits.map((benefit, index) => (
@@ -223,7 +223,7 @@ export default function Electrical() {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">Trusted by homeowners and businesses across New York</p>
+            <p className="text-lg text-gray-600 dark:text-gray-300">Trusted by homeowners and businesses across Toronto and Ontario</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -238,7 +238,7 @@ export default function Electrical() {
               {
                 name: "Carol Wilson",
                 role: "Queens Business Owner",
-                content: "Westside Renovation handled all our office electrical needs. From lighting to emergency systems, everything was done perfectly.",
+                content: "BuildWell Construction handled all our office electrical needs. From lighting to emergency systems, everything was done perfectly.",
                 rating: 5,
                 image: "CW"
               }
@@ -280,7 +280,7 @@ export default function Electrical() {
               Need Safe Electrical Work?
             </h2>
             <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Join hundreds of satisfied customers across New York. Get your free consultation today and experience the difference professional electrical work makes.
+              Join hundreds of satisfied customers across Toronto and Ontario. Get your free consultation today and experience the difference professional electrical work makes.
             </p>
           </div>
           
@@ -293,7 +293,7 @@ export default function Electrical() {
                 </div>
               </div>
               <h3 className="text-lg font-semibold mb-2 text-center">Call Us</h3>
-              <p className="text-blue-100 text-center">(646) 239-1844</p>
+              <p className="text-blue-100 text-center">(437) 688-1994</p>
               <p className="text-sm text-blue-200 text-center mt-1">Available 24/7</p>
             </div>
             
@@ -304,7 +304,7 @@ export default function Electrical() {
                 </div>
               </div>
               <h3 className="text-lg font-semibold mb-2 text-center">Email Us</h3>
-              <p className="text-blue-100 text-center">info@westsidereno.com</p>
+              <p className="text-blue-100 text-center">info@buildwellconstruction.com</p>
               <p className="text-sm text-blue-200 text-center mt-1">Quick response</p>
             </div>
             
@@ -315,7 +315,7 @@ export default function Electrical() {
                 </div>
               </div>
               <h3 className="text-lg font-semibold mb-2 text-center">Service Area</h3>
-              <p className="text-blue-100 text-center">New York, NY</p>
+              <p className="text-blue-100 text-center">Toronto, ON</p>
               <p className="text-sm text-blue-200 text-center mt-1">All 5 boroughs</p>
             </div>
           </div>
