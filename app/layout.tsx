@@ -22,7 +22,8 @@ import {
   Hammer,
   Sparkles,
   Layers,
-  Scissors
+  Scissors,
+  Ruler
 } from 'lucide-react';
 import Logo from './logo/logo2.svg';
 import './globals.css';
@@ -32,22 +33,19 @@ export const metadata: Metadata = {
   title: 'BuildWell Construction | Building Today, For a Stronger Tomorrow',
   description: 'Construction, renovation, design, and project management for commercial, industrial, and residential clients in Toronto and Ontario.',
   keywords: [
-    'renovation NYC',
-    'construction New York',
-    'interior remodeling',
-    'home improvement NYC',
-    'electrical services NYC',
-    'plumbing NYC',
-    'painting contractors',
-    'flooring installation',
-    'kitchen renovation',
-    'bathroom remodeling',
-    'drywall repair',
-    'wallpaper installation',
-    'cleaning services',
-    'licensed contractors NYC',
+    'BuildWell Construction',
+    'construction Toronto',
+    'construction Ontario',
+    'commercial construction',
+    'industrial construction',
     'residential renovation',
-    'commercial renovation'
+    'kitchen renovation',
+    'bathroom renovation',
+    'basement renovation',
+    'home extensions',
+    'interior design',
+    'water damage restoration',
+    'emergency construction services'
   ].join(', '),
   authors: [{ name: 'BuildWell Construction', url: 'https://www.buildwellconstruction.com' }],
   creator: 'BuildWell Construction',
@@ -96,24 +94,22 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Westside Renovation Inc - Quality Craftsmanship in NYC',
+        alt: 'BuildWell Construction - Quality construction in Toronto and Ontario',
         type: 'image/jpeg',
       },
       {
         url: '/og-image-square.jpg',
         width: 1200,
         height: 1200,
-        alt: 'Westside Renovation Inc Logo',
+        alt: 'BuildWell Construction Logo',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@WestsideRenovation',
-    creator: '@WestsideRenovation',
-    title: 'Westside Renovation Inc - Premier NYC Renovation Experts',
-    description: 'Professional renovation, construction, and home improvement services in New York City. Licensed, insured, and trusted since 2012.',
+    title: 'BuildWell Construction | Toronto Construction and Renovation',
+    description: 'Commercial, industrial, and residential construction, renovation, design, and project management in Toronto and Ontario.',
     images: ['/twitter-image.jpg'],
   },
   alternates: {
@@ -140,143 +136,110 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://www.westsiderenovationinc.com/#organization',
-      name: 'Westside Renovation Inc',
-      alternateName: 'Westside Renovation',
-      description: 'Professional renovation, construction, and home improvement services in New York City.',
-      url: 'https://www.westsiderenovationinc.com',
-      telephone: '+1-646-239-1844',
-      email: 'info@westsidereno.com',
-      foundingDate: '2012',
-      priceRange: '$$-$$$',
-      image: 'https://www.westsiderenovationinc.com/logo-large.jpg',
-      logo: 'https://www.westsiderenovationinc.com/logo.png',
+      '@id': 'https://www.buildwellconstruction.com/#organization',
+      name: 'BuildWell Construction',
+      description: 'Construction, renovation, design, and project management for commercial, industrial, and residential clients in Toronto and Ontario.',
+      url: 'https://www.buildwellconstruction.com',
+      telephone: '+1-437-688-1994',
+      email: 'info@buildwellconstruction.com',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '123 Renovation St',
-        addressLocality: 'New York',
-        addressRegion: 'NY',
-        postalCode: '10001',
-        addressCountry: 'US',
+        streetAddress: '123 Construction Way',
+        addressLocality: 'Toronto',
+        addressRegion: 'ON',
+        postalCode: 'M1M 1M1',
+        addressCountry: 'CA',
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: '40.7589',
-        longitude: '-73.9851',
+        latitude: '43.7973',
+        longitude: '-79.2390',
       },
       areaServed: [
         {
           '@type': 'City',
-          name: 'New York',
-          sameAs: 'https://en.wikipedia.org/wiki/New_York_City',
+          name: 'Toronto',
+          sameAs: 'https://en.wikipedia.org/wiki/Toronto',
         },
         {
           '@type': 'State',
-          name: 'New York',
-          sameAs: 'https://en.wikipedia.org/wiki/New_York_(state)',
+          name: 'Ontario',
+          sameAs: 'https://en.wikipedia.org/wiki/Ontario',
         },
       ],
       serviceArea: {
         '@type': 'GeoCircle',
         geoMidpoint: {
           '@type': 'GeoCoordinates',
-          latitude: '40.7589',
-          longitude: '-73.9851',
+          latitude: '43.7973',
+          longitude: '-79.2390',
         },
         geoRadius: '50000',
       },
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Renovation Services',
+        name: 'BuildWell Construction Services',
         itemListElement: [
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Interior Remodeling',
-              description: 'Complete interior transformations including kitchen and bathroom renovations',
+              name: 'Planning, Conception and Execution',
+              description: 'Project planning, design coordination, construction, and execution from concept to completion',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Electrical Services',
-              description: 'Licensed electrical work including installations, repairs, and upgrades',
+              name: 'Commercial, Industrial and Residential Construction',
+              description: 'Construction and renovation solutions for commercial, industrial, and residential projects',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Plumbing Services',
-              description: 'Professional plumbing solutions for residential and commercial properties',
+              name: 'Kitchen, Bathroom and Basement Renovation',
+              description: 'Functional renovation solutions with quality materials and professional workmanship',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Painting Services',
-              description: 'Interior and exterior painting with color consultation',
+              name: 'Extensions and Interior Design',
+              description: 'Property extensions, general renovation, and interior design services',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Flooring Installation',
-              description: 'Expert installation of hardwood, tile, vinyl, and other flooring materials',
+              name: 'Emergency and Water Damage Restoration',
+              description: 'Responsive construction and restoration support when property damage occurs',
             },
           },
         ],
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        ratingCount: '150',
-        bestRating: '5',
-        worstRating: '1',
-      },
-      review: [
-        {
-          '@type': 'Review',
-          author: {
-            '@type': 'Person',
-            name: 'Sarah Johnson',
-          },
-          reviewRating: {
-            '@type': 'Rating',
-            ratingValue: '5',
-            bestRating: '5',
-          },
-          reviewBody: 'Outstanding service! The team was professional, thorough, and left our home absolutely spotless.',
-        },
-      ],
-      sameAs: [
-        'https://www.facebook.com/westsiderenovation',
-        'https://www.instagram.com/westsiderenovation',
-        'https://www.twitter.com/westsidereno',
-      ],
       openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-16:00'],
-      paymentAccepted: ['Cash', 'Credit Card', 'Check', 'Bank Transfer'],
-      currenciesAccepted: 'USD',
+      currenciesAccepted: 'CAD',
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://www.westsiderenovationinc.com/#website',
-      url: 'https://www.westsiderenovationinc.com',
-      name: 'Westside Renovation Inc',
-      description: 'Professional renovation and construction services in New York City',
+      '@id': 'https://www.buildwellconstruction.com/#website',
+      url: 'https://www.buildwellconstruction.com',
+      name: 'BuildWell Construction',
+      description: 'Professional construction, renovation, design, and project management services in Toronto and Ontario',
       publisher: {
-        '@id': 'https://www.westsiderenovationinc.com/#organization',
+        '@id': 'https://www.buildwellconstruction.com/#organization',
       },
       potentialAction: [
         {
           '@type': 'SearchAction',
           target: {
             '@type': 'EntryPoint',
-            urlTemplate: 'https://www.westsiderenovationinc.com/search?q={search_term_string}',
+            urlTemplate: 'https://www.buildwellconstruction.com/search?q={search_term_string}',
           },
           'query-input': 'required name=search_term_string',
         },
@@ -287,15 +250,12 @@ const structuredData = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const services = [
-    { name: 'Interior Remodeling', path: '/services/interior-remodeling', icon: Home },
-    { name: 'Installation', path: '/services/installation', icon: Wrench },
-    { name: 'Painting', path: '/services/painting', icon: Palette },
-    { name: 'Electrical', path: '/services/electrical', icon: Zap },
-    { name: 'Plumbing', path: '/services/plumbing', icon: Droplets },
-    { name: 'Wallpaper', path: '/services/wallpaper', icon: Scissors },
-    { name: 'Drywall Repairs', path: '/services/repairs', icon: Hammer },
-    { name: 'Cleaning', path: '/services/cleaning', icon: Sparkles },
-    { name: 'Flooring', path: '/services/flooring', icon: Layers },
+    { name: 'Planning & Execution', path: '/services', icon: Ruler },
+    { name: 'Kitchen & Bathroom', path: '/services/interior-remodeling', icon: Home },
+    { name: 'Basement Renovation', path: '/services/interior-remodeling', icon: Hammer },
+    { name: 'General Renovation', path: '/services/interior-remodeling', icon: Wrench },
+    { name: 'Interior Design', path: '/services/interior-remodeling', icon: Palette },
+    { name: 'Emergency & Water Damage', path: '/services/repairs', icon: Droplets },
   ];
 
   return (
@@ -307,10 +267,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <meta name="geo.region" content="US-NY" />
-        <meta name="geo.placename" content="New York" />
-        <meta name="geo.position" content="40.7589;-73.9851" />
-        <meta name="ICBM" content="40.7589, -73.9851" />
+        <meta name="geo.region" content="CA-ON" />
+        <meta name="geo.placename" content="Toronto, Ontario" />
+        <meta name="geo.position" content="43.7973;-79.2390" />
+        <meta name="ICBM" content="43.7973, -79.2390" />
       </head>
       <body className={cn('min-h-screen flex flex-col antialiased')}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
@@ -333,7 +293,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-blue-200/20 dark:from-blue-400/20 dark:to-cyan-400/20 rounded-xl blur-sm"></div>
                         <Image
                           src={Logo}
-                          alt="Westside Renovation Logo"
+                          alt="BuildWell Construction Logo"
                           width={48}
                           height={48}
                           className="h-12 w-12 rounded-xl relative z-10 shadow-lg"
@@ -341,23 +301,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       </div>
                       <div>
                         <h2 className="font-black text-lg sm:text-xl bg-gradient-to-r from-white to-blue-200 dark:from-blue-100 dark:to-cyan-200 bg-clip-text text-transparent">
-                          WESTSIDE
+                          BUILDWELL
                         </h2>
                         <p className="text-xs text-blue-200 dark:text-blue-300 font-semibold tracking-wider">
-                          RENOVATION INC
+                          CONSTRUCTION
                         </p>
                       </div>
                     </Link>
                     
                     <p className="text-blue-100 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
-                      Transforming spaces in NYC with quality craftsmanship and innovative design solutions since 2012.
+                      Construction, renovation, design, and project management for commercial, industrial, and residential clients.
                     </p>
                     
                     <div className="flex space-x-3">
                       {[
-                        { icon: Facebook, href: 'https://facebook.com/westsiderenovation', label: 'Facebook' },
-                        { icon: Twitter, href: 'https://twitter.com/westsidereno', label: 'Twitter' },
-                        { icon: Instagram, href: 'https://instagram.com/westsiderenovation', label: 'Instagram' },
+                        { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
+                        { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
                       ].map((social, index) => (
                         <Button
                           key={index}
@@ -433,35 +392,35 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       <div className="flex items-start space-x-3">
                         <MapPin className="h-4 w-4 mt-1 text-blue-300 dark:text-blue-400 flex-shrink-0" />
                         <span className="text-blue-200 dark:text-gray-300 text-sm leading-relaxed">
-                          New York, NY<br />
-                          All 5 Boroughs
+                          123 Construction Way<br />
+                          Toronto, ON M1M 1M1
                         </span>
                       </div>
                       
                       <div className="flex items-center space-x-3">
                         <Phone className="h-4 w-4 text-blue-300 dark:text-blue-400 flex-shrink-0" />
                         <a 
-                          href="tel:+16462391844" 
+                          href="tel:+14376881994" 
                           className="text-blue-200 dark:text-gray-300 hover:text-white dark:hover:text-blue-200 transition-colors duration-300 text-sm font-medium"
                         >
-                          (646) 239-1844
+                          (437) 688-1994
                         </a>
                       </div>
                       
                       <div className="flex items-center space-x-3">
                         <Mail className="h-4 w-4 text-blue-300 dark:text-blue-400 flex-shrink-0" />
                         <a
-                          href="mailto:info@westsidereno.com"
+                          href="mailto:info@buildwellconstruction.com"
                           className="text-blue-200 dark:text-gray-300 hover:text-white dark:hover:text-blue-200 transition-colors duration-300 text-sm"
                         >
-                          info@westsidereno.com
+                          info@buildwellconstruction.com
                         </a>
                       </div>
                     </div>
 
                     <div className="space-y-4">
                       <p className="text-blue-200 dark:text-gray-300 text-sm leading-relaxed">
-                        Ready to transform your space? Get a free consultation today!
+                        Ready to build something better? Request a consultation today.
                       </p>
                       <Button
                         className="w-full  bg-blue-700 dark:bg-blue-300 text-white dark:text-black"
@@ -481,7 +440,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:justify-between sm:items-center">
                     <div className="text-center sm:text-left">
                       <p className="text-sm text-blue-200 dark:text-gray-300 mb-2 sm:mb-0">
-                        &copy; {new Date().getFullYear()} Westside Renovation Inc. All rights reserved.
+                        &copy; {new Date().getFullYear()} BuildWell Construction. All rights reserved.
                       </p>
                       <div className="flex justify-center sm:justify-start space-x-4 text-xs text-blue-300 dark:text-gray-400">
                         <Link href="/privacy" className="hover:text-white dark:hover:text-blue-200 transition-colors">Privacy Policy</Link>
@@ -492,11 +451,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <div className="flex justify-center sm:justify-end items-center space-x-4 text-sm text-blue-200 dark:text-gray-300">
                       <span className="flex items-center">
                         <span className="w-2 h-2 bg-green-400 dark:bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                        Licensed & Insured
-                      </span>
-                      <span className="flex items-center">
-                        <span className="text-yellow-400 mr-1">⭐</span>
-                        5.0 Rating
+                        Commercial · Industrial · Residential
                       </span>
                     </div>
                   </div>
