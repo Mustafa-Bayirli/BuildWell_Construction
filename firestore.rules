@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Projects collection - public read, admin write
+    match /projects/{projectId} {
+      allow read: if true;
+      allow create, update, delete: if isAuthenticated() && isAdmin() && 
+        (request.method == 'delete' || validateProject(request.resource.data));
+      // ☝️ Added delete exception to validation
+    }
+    
+    // Admin users collection
+    match /admins/{adminId} {
+      allow read, write: if isAuthenticated() && request.auth.uid == adminId;
+    }
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+             request.auth.token.email == 'marcospineda27@westsideren.com';
+             // ☝️ Simplified since single admin
+    }
+    
+    function validateProject(data) {
+      return data.keys().hasAll(['title', 'description', 'location', 'category', 'featured', 'completedDate', 'createdAt', 'updatedAt']) &&
+             data.title is string && data.title.size() > 0 && data.title.size() <= 100 &&
+             data.description is string && data.description.size() > 0 && data.description.size() <= 2000 &&
+             data.location is string && data.location.size() > 0 && data.location.size() <= 100 &&
+             data.category is string && data.category.size() > 0 && data.category.size() <= 50 &&
+             data.featured is bool &&
+             data.completedDate is timestamp &&
+             data.createdAt is timestamp &&
+             data.updatedAt is timestamp &&
+             (!('images' in data) || (data.images is list && data.images.size() <= 20));
+             // ☝️ Added field length limits and image count limit
+    }
+  }
+}
