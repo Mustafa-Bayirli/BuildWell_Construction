@@ -1,6 +1,6 @@
 // components/SEOHead.tsx
 import Head from 'next/head';
-import { Project } from '@/lib/firebase-admin';
+import { Project } from '@/lib/project-data';
 
 interface SEOHeadProps {
   title?: string;

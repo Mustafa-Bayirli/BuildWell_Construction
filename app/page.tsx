@@ -1,4 +1,3 @@
-// app/page.tsx (Updated to use Firebase)
 "use client";
 
 import { useEffect, useState } from "react";
@@ -25,7 +24,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronRight, Award, CheckCircle, Clock, Phone, Hammer, Paintbrush, Wrench, HomeIcon, ArrowRight, Star } from "lucide-react";
-import { projectService, Project } from "@/lib/firebase-admin";
+import { projectService, Project } from "@/lib/project-data";
 
 // Reusable section header component
 interface SectionHeaderProps {
@@ -112,7 +111,7 @@ export default function Home() {
   const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
   const heroY = useTransform(scrollY, [0, 300], [0, 100]);
 
-  // Load featured projects from Firebase
+  // Load featured projects from the local project catalog.
   useEffect(() => {
     const loadFeaturedProjects = async () => {
       try {

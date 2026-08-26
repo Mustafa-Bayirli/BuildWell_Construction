@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, MapPin, Star, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './ImageWithFallback';
-import { Project } from '@/lib/firebase-admin';
+import { Project } from '@/lib/project-data';
 
 interface ProjectCardProps {
   project: Project;

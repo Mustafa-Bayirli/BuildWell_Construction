@@ -11,27 +11,13 @@ import {
   Moon,
   Sun,
   Menu,
-  User,
-  LogOut,
-  Settings,
-  Shield,
   Home,
   Info,
   Wrench,
   Mail,
   Eye,
-  Plus,
 } from 'lucide-react';
-import { useAuth } from '@/lib/auth-context';
 import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -149,7 +135,6 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
   const router = useRouter();
   const { theme, setTheme } = useTheme();
-  const { user, isAdmin, logout } = useAuth();
   const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -172,15 +157,6 @@ const Navbar: React.FC = () => {
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
-  const handleLogout = async () => {
-    try {
-      await logout();
-      router.push('/');
-    } catch (error) {
-      console.error('Error logging out:', error);
-    }
   };
 
   if (!mounted) return null;
@@ -281,7 +257,7 @@ const Navbar: React.FC = () => {
             )}
           </div>
 
-          {/* Right Side: Theme Toggle + User Menu + Mobile Menu Button */}
+          {/* Right Side: Theme Toggle + Mobile Menu Button */}
           <div className="flex items-center space-x-3">
             {/* Theme Toggle */}
             <Button
@@ -297,58 +273,6 @@ const Navbar: React.FC = () => {
                 <Moon className="h-5 w-5 text-blue-600" />
               )}
             </Button>
-
-            {/* User Menu */}
-            {user && isAdmin ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white"
-                    aria-label="Admin menu"
-                  >
-                    <Shield className="h-4 w-4 mr-2" />
-                    <span className="hidden sm:inline">Admin</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-56 bg-background border-blue-200 dark:border-blue-800">
-                  <DropdownMenuLabel>
-                    <div>
-                      <p className="text-sm font-medium text-gray-900 dark:text-white">{user.email?.split('@')[0]}</p>
-                      <p className="text-xs text-gray-800 dark:text-gray-200">Administrator</p>
-                    </div>
-                  </DropdownMenuLabel>
-                  <DropdownMenuSeparator className="bg-blue-200 dark:bg-blue-800" />
-                  <DropdownMenuItem asChild>
-                    <Link href="/admin/dashboard" className="flex items-center">
-                      <Settings className="h-4 w-4 mr-2 text-blue-600" />
-                      Dashboard
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link href="/admin/projects/new" className="flex items-center">
-                      <Plus className="h-4 w-4 mr-2 text-green-500" />
-                      Add Project
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator className="bg-blue-200 dark:bg-blue-800" />
-                  <DropdownMenuItem onClick={handleLogout} className="flex items-center">
-                    <LogOut className="h-4 w-4 mr-2 text-red-500" />
-                    Logout
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <Button
-                variant="outline"
-                className="border-blue-300 text-blue-600 hover:bg-blue-100 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-900/30"
-                asChild
-              >
-                <Link href="/admin/login" className="flex items-center space-x-2">
-                  <User className="h-4 w-4" />
-                  <span className="hidden sm:inline">Admin</span>
-                </Link>
-              </Button>
-            )}
 
             {/* Mobile Menu Button */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -453,50 +377,6 @@ const Navbar: React.FC = () => {
                         )}
                       </div>
                     ))}
-                    {user && isAdmin && (
-                      <div className="border-t border-blue-200 dark:border-blue-800 pt-4 mt-4">
-                        <div className="text-xs font-medium text-gray-800 dark:text-gray-200 mb-2 px-3">
-                          ADMIN PANEL
-                        </div>
-                        <Link
-                          href="/admin/dashboard"
-                          className={cn(
-                            'flex items-center space-x-2 w-full p-3 rounded-lg text-sm',
-                            pathname === '/admin/dashboard'
-                              ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300'
-                              : 'text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900/30',
-                          )}
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          <Settings className="h-4 w-4 text-blue-600" />
-                          <span>Dashboard</span>
-                        </Link>
-                        <Link
-                          href="/admin/projects/new"
-                          className={cn(
-                            'flex items-center space-x-2 w-full p-3 rounded-lg text-sm',
-                            pathname === '/admin/projects/new'
-                              ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300'
-                              : 'text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900/30',
-                          )}
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          <Plus className="h-4 w-4 text-green-500" />
-                          <span>Add Project</span>
-                        </Link>
-                        <Button
-                          variant="ghost"
-                          className="flex items-center space-x-2 w-full p-3 text-sm justify-start text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900/30"
-                          onClick={() => {
-                            handleLogout();
-                            setMobileMenuOpen(false);
-                          }}
-                        >
-                          <LogOut className="h-4 w-4 text-red-500" />
-                          <span>Logout</span>
-                        </Button>
-                      </div>
-                    )}
                   </nav>
                 </motion.div>
               </SheetContent>

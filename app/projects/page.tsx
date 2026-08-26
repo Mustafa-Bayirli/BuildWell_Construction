@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { projectService, Project } from '@/lib/firebase-admin';
+import { projectService, Project } from '@/lib/project-data';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';

@@ -35,7 +35,7 @@ import {
   ChevronRight,
   Loader2,
 } from 'lucide-react';
-import { projectService, Project } from '@/lib/firebase-admin';
+import { projectService, Project } from '@/lib/project-data';
 import { cn } from '@/lib/utils';
 
 // Animation variants - optimized for performance

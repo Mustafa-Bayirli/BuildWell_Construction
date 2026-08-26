@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import Navbar from './pageComponents/navbar/Navbar';
-import { AuthProvider } from '@/lib/auth-context';
 import { 
   Facebook, 
   Twitter, 
@@ -315,8 +314,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={cn('min-h-screen flex flex-col antialiased')}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <AuthProvider>
-            <Navbar />
+          <Navbar />
             <main className="flex-1">{children}</main>
             
             {/* Enhanced Modern Footer */}
@@ -507,7 +505,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </footer>
             
             <Toaster position="top-right" richColors expand visibleToasts={4} closeButton />
-          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
