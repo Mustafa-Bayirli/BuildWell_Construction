@@ -176,7 +176,7 @@ const Navbar: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-sky-500 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-200" />
               <Image
                 src={Logo}
-                alt="Westside Renovation Logo"
+                alt="BuildWell Construction Logo"
                 width={48}
                 height={48}
                 className="object-cover h-12 w-12 rounded-xl relative z-10"
@@ -186,10 +186,10 @@ const Navbar: React.FC = () => {
             </div>
             <div className="hidden sm:block">
               <h2 className="font-bold text-lg bg-gradient-to-r from-gray-900 to-blue-600 dark:from-white dark:to-blue-300 bg-clip-text text-transparent">
-                WESTSIDE
+                BUILDWELL
               </h2>
               <p className="text-xs text-gray-800 dark:text-gray-200 font-medium tracking-wide">
-                RENOVATION INC
+                CONSTRUCTION
               </p>
             </div>
           </Link>
@@ -304,14 +304,14 @@ const Navbar: React.FC = () => {
                     <div className="flex items-center space-x-3">
                       <Image
                         src={Logo}
-                        alt="Westside Renovation Logo"
+                        alt="BuildWell Construction Logo"
                         width={40}
                         height={40}
                         className="h-10 w-10 rounded-xl"
                       />
                       <div>
-                        <h2 className="font-bold text-lg text-gray-900 dark:text-white">WESTSIDE</h2>
-                        <p className="text-xs text-gray-800 dark:text-gray-200">RENOVATION INC</p>
+                        <h2 className="font-bold text-lg text-gray-900 dark:text-white">BUILDWELL</h2>
+                        <p className="text-xs text-gray-800 dark:text-gray-200">CONSTRUCTION</p>
                       </div>
                     </div>
                   </div>

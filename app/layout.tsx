@@ -28,9 +28,9 @@ import Logo from './logo/logo2.svg';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.westsiderenovationinc.com'),
-  title: 'Westside Renovation Inc - Premier NYC Renovation & Construction Experts',
-  description: 'Professional renovation, construction, and home improvement services in New York City. Specializing in interior remodeling, electrical, plumbing, painting, flooring, and more. Licensed, insured, and trusted since 2012.',
+  metadataBase: new URL('https://www.buildwellconstruction.com'),
+  title: 'BuildWell Construction | Building Today, For a Stronger Tomorrow',
+  description: 'Construction, renovation, design, and project management for commercial, industrial, and residential clients in Toronto and Ontario.',
   keywords: [
     'renovation NYC',
     'construction New York',
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     'residential renovation',
     'commercial renovation'
   ].join(', '),
-  authors: [{ name: 'Westside Renovation Inc', url: 'https://www.westsiderenovationinc.com' }],
-  creator: 'Westside Renovation Inc',
-  publisher: 'Westside Renovation Inc',
+  authors: [{ name: 'BuildWell Construction', url: 'https://www.buildwellconstruction.com' }],
+  creator: 'BuildWell Construction',
+  publisher: 'BuildWell Construction',
   formatDetection: {
     email: false,
     address: false,
@@ -87,10 +87,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.westsiderenovationinc.com',
-    siteName: 'Westside Renovation Inc',
-    title: 'Westside Renovation Inc - Premier NYC Renovation & Construction Experts',
-    description: 'Professional renovation, construction, and home improvement services in New York City. Licensed, insured, and trusted since 2012.',
+    url: 'https://www.buildwellconstruction.com',
+    siteName: 'BuildWell Construction',
+    title: 'BuildWell Construction | Building Today, For a Stronger Tomorrow',
+    description: 'Construction, renovation, design, and project management for commercial, industrial, and residential clients in Toronto and Ontario.',
     images: [
       {
         url: '/og-image.jpg',
@@ -117,7 +117,7 @@ export const metadata: Metadata = {
     images: ['/twitter-image.jpg'],
   },
   alternates: {
-    canonical: 'https://www.westsiderenovationinc.com',
+    canonical: 'https://www.buildwellconstruction.com',
   },
   category: 'construction',
   classification: 'Business',
