@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
     email: "",
     phone: "",
     message: "",
-    service: "general"
+    service: "other"
   });
   
   const [formState, setFormState] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
         email: "",
         phone: "",
         message: "",
-        service: "general"
+        service: "other"
       });
       
       // Reset form after 3 seconds
@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
             className="bg-blue-600/30 backdrop-blur-sm text-blue-100 rounded-full px-4 py-1 inline-block mb-4 border border-blue-400/30"
             style={{ willChange: "transform" }}
           >
-            Get In Touch
+            Start Your Project
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, transform: "translateY(20px)" }}
@@ -135,7 +135,7 @@ const Contact: React.FC = () => {
             className="text-4xl sm:text-5xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ willChange: "transform" }}
           >
-            Contact Us
+            Contact BuildWell Construction
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg sm:text-xl text-gray-100 max-w-2xl drop-shadow-md"
           >
-            We're here to answer your questions and bring your vision to life
+            Tell us about your construction, renovation, extension, or restoration project.
           </motion.p>
         </div>
       </section>
@@ -163,10 +163,10 @@ const Contact: React.FC = () => {
             <div className="mb-6">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
                 <MessageSquare className="w-6 h-6 text-blue-500 mr-2" />
-                Send Us a Message
+                Let&apos;s Build Your Vision
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mt-2">
-                Fill out the form below and we'll get back to you as soon as possible.
+                Share a few details and our team will be in touch to discuss your requirements.
               </p>
             </div>
             
@@ -233,18 +233,24 @@ const Contact: React.FC = () => {
                   className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-2 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   disabled={formState === "submitting"}
                 >
-                  <option value="general">General Inquiry</option>
-                  <option value="renovation">Home Renovation</option>
-                  <option value="carpentry">Custom Carpentry</option>
-                  <option value="kitchen">Kitchen Remodeling</option>
+                  <option value="other">Select a project type</option>
+                  <option value="residential">Residential</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="industrial">Industrial</option>
+                  <option value="kitchen">Kitchen Renovation</option>
                   <option value="bathroom">Bathroom Renovation</option>
-                  <option value="deck">Deck Construction</option>
+                  <option value="basement">Basement Renovation</option>
+                  <option value="extension">Extension</option>
+                  <option value="interior-design">Interior Design</option>
+                  <option value="water-damage">Water Damage</option>
+                  <option value="emergency">Emergency Service</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
               
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Your Message <span className="text-red-500">*</span>
+                  Tell Us About Your Project <span className="text-red-500">*</span>
                 </label>
                 <Textarea
                   id="message"
@@ -276,7 +282,7 @@ const Contact: React.FC = () => {
                   className="bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 p-3 rounded-md flex items-start"
                 >
                   <CheckCircle2 className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                  <p>Your message has been sent successfully! We'll be in touch soon.</p>
+                  <p>Your consultation request has been sent successfully! We&apos;ll be in touch soon.</p>
                 </motion.div>
               )}
               
@@ -327,8 +333,8 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">Phone</h3>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      <a href="tel:+16462391844" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                        (646) 239-1844
+                      <a href="tel:+14376881994" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                        (437) 688-1994
                       </a>
                     </p>
                   </div>
@@ -341,8 +347,8 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">Email</h3>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      <a href="mailto:info@westsideren.com" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                        info@westsideren.com
+                      <a href="mailto:info@buildwellconstruction.com" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                        info@buildwellconstruction.com
                       </a>
                     </p>
                   </div>
@@ -355,8 +361,8 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">Office Location</h3>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      123 Renovation Street<br />
-                      New York, NY 10001
+                      123 Construction Way<br />
+                      Toronto, ON M1M 1M1
                     </p>
                   </div>
                 </div>
@@ -388,10 +394,10 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">Schedule a Consultation</h3>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Prefer to schedule a specific time? Book a consultation with our team to discuss your project in detail.
+                Prefer to schedule a specific time? Contact Moe Asslan, Project Manager, to discuss your project in detail.
               </p>
               <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transition-all duration-200">
-                Book Appointment
+                Request a Consultation
               </Button>
             </motion.div>
           </motion.div>
@@ -408,16 +414,16 @@ const Contact: React.FC = () => {
         >
           <div className="absolute inset-0 bg-[url('/cabinetinstallation.png')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
 
-          <h2 className="text-3xl font-bold mb-4 relative z-10">Ready to Transform Your Space?</h2>
+          <h2 className="text-3xl font-bold mb-4 relative z-10">Ready to Build Something Better?</h2>
           <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-6 relative z-10">
-            Contact us today and let us help bring your renovation dreams to life.
+            Whether you are planning a renovation, expansion, or urgent repair, BuildWell Construction is ready to help.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
             <Button size="lg" className="bg-white text-blue-800 hover:bg-blue-50 transition-colors duration-200">
-              Call (646) 239-1844
+              Call (437) 688-1994
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 transition-colors duration-200">
-              Email Us
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 transition-colors duration-200" asChild>
+              <a href="mailto:info@buildwellconstruction.com">Email BuildWell</a>
             </Button>
           </div>
         </motion.div>

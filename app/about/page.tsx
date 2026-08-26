@@ -19,7 +19,8 @@ import {
   Mail,
   Shield,
   Star,
-  Clock
+  Clock,
+  Ruler
 } from "lucide-react";
 
 const About: React.FC = () => {
@@ -56,10 +57,10 @@ const About: React.FC = () => {
   };
 
   const skills = [
-    { name: "Custom Carpentry", value: 95, icon: <Hammer className="w-4 h-4 text-blue-500" /> },
-    { name: "Home Renovation", value: 90, icon: <Home className="w-4 h-4 text-blue-500" /> },
-    { name: "Kitchen & Bath", value: 88, icon: <ChefHat className="w-4 h-4 text-blue-500" /> },
-    { name: "Deck Construction", value: 92, icon: <Layers className="w-4 h-4 text-blue-500" /> }
+    { name: "Project Planning", value: 95, icon: <Ruler className="w-4 h-4 text-blue-500" /> },
+    { name: "General Renovation", value: 90, icon: <Home className="w-4 h-4 text-blue-500" /> },
+    { name: "Kitchen & Bathroom", value: 88, icon: <ChefHat className="w-4 h-4 text-blue-500" /> },
+    { name: "Construction Execution", value: 92, icon: <Layers className="w-4 h-4 text-blue-500" /> }
   ];
 
   return (
@@ -77,7 +78,7 @@ const About: React.FC = () => {
             className="bg-blue-600/30 backdrop-blur-sm text-blue-100 rounded-full px-4 py-1 inline-block mb-4 border border-blue-400/30"
             style={{ willChange: "transform" }}
           >
-            Established 2012
+            Established 2016
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, transform: "translateY(20px)" }}
@@ -86,7 +87,7 @@ const About: React.FC = () => {
             className="text-4xl sm:text-5xl font-bold text-white mb-4 drop-shadow-lg"
             style={{ willChange: "transform" }}
           >
-            About Westside Renovation INC
+            About BuildWell Construction
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -94,7 +95,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg sm:text-xl text-gray-100 max-w-2xl drop-shadow-md"
           >
-            Crafting exceptional spaces with precision and passion
+            Building today, for a stronger tomorrow
           </motion.p>
         </div>
       </section>
@@ -127,30 +128,30 @@ const About: React.FC = () => {
             >
               <div className="flex items-center mb-4">
                 <Shield className="h-6 w-6 text-blue-500 mr-2" />
-                <span className="text-lg font-semibold text-gray-900 dark:text-white">Fully Licensed & Insured</span>
+                <span className="text-lg font-semibold text-gray-900 dark:text-white">From concept to completion</span>
               </div>
               
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                Founded in 2012, Westside Renovation transforms houses into homes that reflect your personality and lifestyle. As a dedicated team of craftspeople, we take pride in our attention to detail and commitment to excellence.
+                Founded in 2016, BuildWell Construction helps clients create practical, durable spaces that support the way they live and work. We take pride in thoughtful planning, clear communication, and quality execution.
               </p>
               
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                With over 200 successful projects completed, we've built our reputation on quality craftsmanship, reliability, and personalized service. We don't just build structures—we create spaces that tell your story.
+                We bring construction, renovation, design, and project management together for commercial, industrial, and residential projects across Toronto and Ontario.
               </p>
 
               {/* Key Stats */}
               <div className="grid grid-cols-3 gap-4 pt-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">12+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">2016</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Founded</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">200+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">3</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Project types</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">100%</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Satisfaction</div>
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">360°</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Project support</div>
                 </div>
               </div>
             </motion.div>
@@ -171,12 +172,11 @@ const About: React.FC = () => {
               >
                 <div className="flex items-center">
                   <Avatar className="w-16 h-16 rounded-full border-2 border-blue-500 mr-4">
-                    <AvatarImage src="/marcos.png" alt="Marcos Pineda" className="object-cover" />
-                    <AvatarFallback className="text-xl bg-blue-200 text-blue-800 dark:bg-blue-800 dark:text-blue-200">MP</AvatarFallback>
+                    <AvatarFallback className="text-xl bg-blue-200 text-blue-800 dark:bg-blue-800 dark:text-blue-200">MA</AvatarFallback>
                   </Avatar>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">Marcos Pineda</h3>
-                    <p className="text-gray-600 dark:text-gray-400">Founder & Master Craftsman</p>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">Moe Asslan</h3>
+                    <p className="text-gray-600 dark:text-gray-400">Project Manager</p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs">Master Carpenter</Badge>
                       <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs">Designer</Badge>
@@ -190,27 +190,6 @@ const About: React.FC = () => {
                 </div>
               </motion.div>
               
-              {/* Team Member */}
-              <motion.div 
-                variants={fadeInUp} 
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6"
-                style={{ willChange: "transform" }}
-              >
-                <div className="flex items-center">
-                  <Avatar className="w-16 h-16 rounded-full border-2 border-blue-500 mr-4">
-                    <AvatarImage src="/luis.png" alt="Luis Pineda" className="object-cover" />
-                    <AvatarFallback className="text-xl bg-blue-200 text-blue-800 dark:bg-blue-800 dark:text-blue-200">LP</AvatarFallback>
-                  </Avatar>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">Luis Pineda</h3>
-                    <p className="text-gray-600 dark:text-gray-400">Skilled Carpentry Support</p>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs">Finishing</Badge>
-                      <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs">Installation</Badge>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -318,7 +297,7 @@ const About: React.FC = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <span className="text-gray-700 dark:text-gray-300 font-medium">100% Customer Satisfaction</span>
+                  <span className="text-gray-700 dark:text-gray-300 font-medium">Quality-focused project delivery</span>
                 </div>
               </div>
             </motion.div>
@@ -336,17 +315,16 @@ const About: React.FC = () => {
         >
           <div className="absolute inset-0 bg-[url('/fencepainting.png')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
           
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 relative z-10">Ready to Transform Your Space?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 relative z-10">Ready to Build Something Better?</h2>
           <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-6 relative z-10">
-            Contact us today for a free consultation. Let's bring your renovation dreams to life!
+            Contact BuildWell Construction to discuss your commercial, industrial, or residential project.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-            <Button size="lg" className="bg-white text-blue-800 hover:bg-blue-50 transition-colors duration-200">
-              <Mail className="w-5 h-5 mr-2" />
-              Contact Us
+            <Button size="lg" className="bg-white text-blue-800 hover:bg-blue-50 transition-colors duration-200" asChild>
+              <a href="mailto:info@buildwellconstruction.com"><Mail className="w-5 h-5 mr-2" />Contact Us</a>
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 transition-colors duration-200">
-              (646) 239-1844
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 transition-colors duration-200" asChild>
+              <a href="tel:+14376881994">(437) 688-1994</a>
             </Button>
           </div>
         </motion.section>
